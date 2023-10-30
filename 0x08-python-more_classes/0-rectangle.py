@@ -6,7 +6,6 @@
 """
 
 class Rectangle:
-
     """
         class: Rectangle
     """
