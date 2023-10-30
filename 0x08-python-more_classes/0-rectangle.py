@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""
-    file: 0-rectangle.py
-    author: achrafedd
-"""
+"""Defines a Rectangle class."""
+
 
 class Rectangle:
-
-    """class: Rectangle"""
+    """Represent a rectangle."""
     pass
