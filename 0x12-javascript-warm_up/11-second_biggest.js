@@ -1,8 +1,8 @@
 #!/usr/bin/node
-let [_0, _1, ...numbers] = process.argv;
+const [,, ...numbers] = process.argv;
 const length = numbers.length;
 const output =
   length > 1
     ? numbers.map((number) => +number).sort((a, b) => a - b)[length - 2]
     : 0;
-console.log(output)
+console.log(output);
