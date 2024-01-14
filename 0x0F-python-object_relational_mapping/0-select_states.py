@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+''' Insert list of states in state table and create in if not exists '''
+import MySQLdb
+from sys import argv
 
 if __name__ == "__main__":
 
-    import MySQLdb
-    from sys import argv
 
     db = MySQLdb.connect(user=argv[1], passwd=argv[2])
 
