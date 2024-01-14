@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" select states with first letter """
 import MySQLdb
 from sys import argv
 
