@@ -4,36 +4,12 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-
-
-    db = MySQLdb.connect(host='localhost', port=3306,
-                        user=argv[1], passwd=argv[2])
-
+    db = MySQLdb.connect(host="localhost", user=argv[1],
+                         passwd=argv[2], db=argv[3], port=3306)
     cur = db.cursor()
-
-    cur.execute('CREATE DATABASE IF NOT EXISTS {}'.format(argv[3]))
-
-    cur.execute('USE {}'.format(argv[3]))
-
-    cur.execute('''CREATE TABLE IF NOT EXISTS states (
-        id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(256) NOT NULL,
-        PRIMARY KEY (id)
-    )''')
-
-    cur.execute('''INSERT INTO states (name)
-        VALUES  ("California"),
-                ("Arizona"),
-                ("Texas"),
-                ("New York"),
-                ("Nevada")''')
-
-    cur.execute('SELECT * from states ORDER BY id ASC')
-
-    states = cur.fetchall()
-
-    for state in states:
-        print(state)
-
+    cur.execute("SELECT * FROM states")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
     cur.close()
     db.close()
