@@ -3,9 +3,9 @@
 send request to display the value of X-Request-Id"""
 
 from urllib import request
-from sys import argv
+import sys
 
-url = argv[1]
+url = sys.argv[1]
 
 with request.urlopen(url) as req:
     print(req.headers["X-Request-Id"])
