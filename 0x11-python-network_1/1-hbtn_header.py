@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" This script take url as argument and
-send request to display the value of X-Request-Id"""
+""" display the value of X-Request-Id from header """
 
 from urllib import request
 import sys
