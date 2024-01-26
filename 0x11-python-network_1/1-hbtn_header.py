@@ -9,4 +9,5 @@ url = sys.argv[1]
 with request.urlopen(url) as req:
     req_id = req.headers["X-Request-Id"]
 
-print(req_id)
+if __name__ == "__main__":
+    print(req_id)
