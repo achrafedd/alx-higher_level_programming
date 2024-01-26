@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This script
+This script take 2 args repo and owner
+to get all commits and display last 10
 """
+
 import sys
 import requests
 
