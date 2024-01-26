@@ -7,4 +7,6 @@ import sys
 url = sys.argv[1]
 
 with request.urlopen(url) as req:
-    print(req.headers["X-Request-Id"])
+    req_id = req.headers["X-Request-Id"]
+
+print(req_id)
