@@ -6,8 +6,9 @@ import sys
 
 url = sys.argv[1]
 
-with request.urlopen(url) as req:
-    req_id = req.headers["X-Request-Id"]
+req = request.Request(url)
+with request.urlopen(req) as res:
+    res_id = res.headers["X-Request-Id"]
 
 if __name__ == "__main__":
-    print(req_id)
+    print(res_id)
