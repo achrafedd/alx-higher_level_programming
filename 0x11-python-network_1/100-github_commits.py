@@ -13,6 +13,8 @@ if __name__ == "__main__":
     res = requests.get(url)
     try:
         for i in range(10):
-            print(f"{res.json()[i]['sha']}: {res.json()[i]['commit']['author']['name']}")
+            sha = res.json()[i]['sha']
+            owner = res.json()[i]['commit']['author']['name']
+            print(f"{sha}: {owner}")
     except IndexError:
         pass
